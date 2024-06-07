@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.moving-light-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+    .moving-light-text {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 992px) {
+    .moving-light-text {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .moving-light-text {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 576px) {
+    .moving-light-text {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 400px) {
+    .moving-light-text {
+        font-size: 1em;
+    }
+}
